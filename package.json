@@ -1,0 +1,22 @@
+{
+  "name": "flatc",
+  "version": "0.1.0",
+  "description": "FlatBuffers: flatc wrapper.",
+  "main": "index.js",
+  "scripts": {
+    "install": "node install.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flatbuffers",
+    "flatc"
+  ],
+  "author": "jaune",
+  "license": "MIT",
+  "dependencies": {
+    "extract-zip": "^1.0.3",
+    "fs-extra": "^0.16.5",
+    "nugget": "^1.4.1",
+    "tmp": "0.0.25"
+  }
+}

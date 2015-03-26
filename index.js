@@ -30,13 +30,6 @@ function flatc_json_to_bin(schema_path, json_path, bin_path, done) {
     });
 }
 
-
-// flatc_json_to_bin('E:/Projects/hope/src/asset/assets.fbs', 'E:/Projects/hope/samples/toy/build/assets.headers.json', path_.join(__dirname, 'assets.headers.bin'), function (error) {
-//     if (error) { return console.log(error); }
-//     console.log('---*---');
-// });
-
-
 var Schema = function (path) {
     this.path = path;
 };
@@ -46,6 +39,6 @@ Schema.prototype.encode = function(json_path, bin_path, done) {
 };
 
 module.exports = {
-    bin_path: fs.readFileSync(path.join(__dirname, 'path.txt'), 'utf-8'),
+    bin_path: fs_.readFileSync(path.join(__dirname, 'path.txt'), 'utf-8'),
     Schema: Schema
 };

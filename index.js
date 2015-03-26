@@ -39,6 +39,6 @@ Schema.prototype.encode = function(json_path, bin_path, done) {
 };
 
 module.exports = {
-    bin_path: fs_.readFileSync(path.join(__dirname, 'path.txt'), 'utf-8'),
+    bin_path: fs_.readFileSync(path_.join(__dirname, 'path.txt'), 'utf-8'),
     Schema: Schema
 };

@@ -14,9 +14,20 @@ function flatc_json_to_bin(schema_path, json_path, bin_path, done) {
              cwd: output_path
         });
 
+        var stdout = '';
+
+        child.stdout.on('data', function (data) {
+            stdout += data.toString();
+        });
+
         child.on('exit', function () {
             fs_.readdir(output_path, function (error, files) {
                 if (error) { return done(error); }
+
+                if (files.length !== 1) {
+                    done(new Error(stdout));
+                    return;
+                }
 
                 fse_.copy(path_.join(output_path, files.pop()), bin_path, function (error) {
                     cleanupCallback();
